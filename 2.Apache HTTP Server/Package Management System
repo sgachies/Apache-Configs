@@ -1,0 +1,26 @@
+package Management System
+
+-Automate software installatio, configuration, upgrades, removal
+	dpkg -Debain Packaging System which is used for OS like debian and ubuntu
+	Wrapped with Advanced Packaging Tool APK
+	rpm -Originally Red Hat Linux packaging system
+	Wrapped with Yellowdog Updater, Modified (YUM)
+
+Why use Package Management
+
+-Streamlined Updates One or Two commands
+-Other package managers exist
+
+
+
+Command to display Apache packages
+$dpkg -l | grep apache
+
+Comman to determine the type of OS we are using
+$cat /etc/issue
+$cat /etc/*-release
+
+
+OS - linux
+Distribution - Ubuntu
+Release - 14.04

@@ -1,0 +1,32 @@
+Example: 
+
+Step 1
+Go to the directory 
+$sudoedit /etc/apache2/sites-available/alice.conf
+
+Step 2
+Add the snippet of code in the alice.conf file 
+
+Errorlog  ${APACHE_LOG_DIR}/alice-error.log
+LogLevel info
+CustomLog ${APACHE_LOG_DIR}/alice-access.log combined 
+
+Step 3
+sudo service apache2 graceful 
+
+Step 4 
+Check the directory
+$ cd var/log/apache2 ls -la
+.
+alice-error.log
+alice-access.log
+
+
+Step 4
+Veiwing error logs in real time
+
+$ tail -f alice-error.log
+
+
+
+

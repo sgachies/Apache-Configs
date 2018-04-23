@@ -1,0 +1,11 @@
+Investigation
+- Determine if a package manager was used
+- Check to see if it was compiled from source
+
+redhut and centos
+$rpm -qa | grep httpd
+Debian and linux
+$dpkg -l | grep apache
+$ls -la /usr/local/src
+$cat /etc/issue   
+$cat /etc/*-release

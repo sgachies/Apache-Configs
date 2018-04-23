@@ -1,0 +1,54 @@
+Methods of installing
+
+Automates software installation, configuration, upgrades, removal
+
+
+Method 1
+
+Package Management System
+Automates software installation, configuration, upgrades, removal
+
+dpkg - Debian PAcking System
+ Wrapped with Advanced Packaging Tool (APT)
+rpm - Originally Red Hat Linux Packaging System
+ Wrapped with yellowdog Updater, Modified (YUM)
+
+ Why use Package MAnagement ?
+ -Streamlined updates
+  one or two commands
+
+ -Other package  managers exist
+  Consult documentation of distro to determine best option
+
+ Method 2
+
+ Manual Installation
+  Difficult and impractical
+  Depending on needs of the project, may be necessary
+  Compiling from source is laborious - not done often 
+
+
+Stick to package manager
+
+
+Method 3
+Precompiled into Binaries
+
+For specific OS 
+Limited in availability , maintainability
+Builds for only two operating systems available
+  Netware - currently maintained
+  Windows - 32 bit versions stopped at 2.2
+
+
+ Method 4
+Bundled with a package
+
+xampp, wampserver , mamp
+
+ Above used for local development 
+ Never use for public 
+
+
+
+

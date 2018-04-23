@@ -1,0 +1,66 @@
+Virtual Hosting
+
+Server content for multiple domains from same server
+Shared web hosting is the most commonly used by shared web hosts
+Cost effective
+
+Apache provides two types of virtual hosting 
+--------------------------------------------
+Name-Based Virtual Hosting 
+>Routes requests based on domain name
+>Easiest to implement but present challenges for SSL as the server
+  doesnt know which certificate to be using.
+
+IP-Based Virtual Hosting 
+> Separate IP address per site
+> Solves SSL challenges
+> Costlier
+> Greater technical overhead
+
+
+cat /etc/apache2/sites-available/alice.conf
+
+<VirtualHost 10.0.2.15:80>  
+        ServerAdmin username@example.com
+        ServerName alice.example.com
+
+        <Directory /srv/web/>
+          Order allow,deny
+          Allow from all
+          Require all granted
+        </Directory>
+
+        DocumentRoot /srv/web
+</VirtualHost>
+
+
+
+The alice.conf is contained in a <> </>.. <> </> symbolizes which means anything in those symbols is enclosed or belongs to these directive
+
+<VirtualHost 10.0.2.15:80>  -> Directive that shows these is a virtual host
+This is an IP based  virtal host  . It can be fully qualified domain name. But not recommended for the apache configuration 
+port 80 indicates its listening on that port.
+
+ServerAdmin username@example.com -> Sets the contact address for error messages that is returned to the client if the message is using custom  error messages and is exposing contact information these configuration is not necessary 
+
+ServerName alice.example.com -> System host should explicitly be set the value as nit uniquely identifies name based virtual host.
+
+<Directory /srv/web/> -> Encloses a set of configuration and the directory is the argument path /svr/web/alice.html
+
+Next 3 line  are directives for permission
+
+ Order allow, -> deny controls the defualt access site and defines the order in which allow and deny directory are evaluated  
+
+ Allow from all
+
+ Require all granted It indicates all users are granted access unconditionally 
+
+  </Directory>
+
+     DocumentRoot /srv/web -> This the directory in which apache will be serving files 
+
+</VirtualHost>
+
+$apachectl -t -D DUMP_VHOSTS
+The command displays an explicit list of all virtual host how they are defined the server name and file in line in with  the file configuration starts
+

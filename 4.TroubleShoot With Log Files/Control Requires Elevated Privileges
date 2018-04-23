@@ -1,0 +1,14 @@
+
+Control Requires Elevated Privileges
+Root - Linux super user
+sudo - Provides elevated priveleges to regular accounts
+
+The command give status of the apache server 
+$apachectl status
+The command kills the server
+$sudo apachectl -k stop
+$sudo apachectl -k start
+
+sudo /etc/init.d/apache2 stop
+sudo /etc/init.d/apache2 start
+sudo /etc/init.d/apache2 graceful

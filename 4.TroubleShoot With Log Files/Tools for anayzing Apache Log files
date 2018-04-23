@@ -1,0 +1,16 @@
+Tools for anayzing Apache Log files
+
+Open Source Tools
+>AWStats
+>GoAccess
+>Log Aggregators
+   graylog2.org
+   logstash.net
+
+
+What are your goals ?
+Tracking access to resources
+What pages contain missing images
+Performance problems triggered by bots
+Define the problem, know what information is available
+

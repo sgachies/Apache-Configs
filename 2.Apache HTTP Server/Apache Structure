@@ -1,0 +1,42 @@
+Apache Structure 
+-Parent service with multiple child processes
+ Each child can serve different pages at the same time
+-Control is like a manager with team Interactions throug the parent
+ Parent manages children
+-Fault tolerant, high performance
+
+
+Interacing with Apache
+apachectl - script to control service.
+	Some distribution provide anaother layer on top of apachectl
+
+Apache Actions
+
+-Status 
+show what apache is doing 
+May need to be enabled manually
+-Start
+Starts parent web server and spawns children
+-Stop 
+Parent tells children to shutdown right now
+Parent process shuts down
+-graceful-stop
+Request in progress are completed
+Parent process shutdown
+-restart
+Parent does not fully exit
+Children are stopped
+Configuration re-read
+Children spawned with new config
+Required for low-level configuration changes
+-graceful
+Also known as reload
+Children finish what they're doing
+Graceful shutdown
+COnfig re-read
+Children spawned
+Required for minor configuration changes
+
+
+
+

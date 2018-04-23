@@ -1,0 +1,42 @@
+Configuration Directives
+Directive is an instruction that tells apache what to do
+
+-One per line
+-Instruction telling Apache what to do
+-Usually followed by an argument
+
+ 	Data passed to the directive
+ 	Example: ServerName - Sets hostname, port for redirects
+ 	ServerName www.example.com
+
+ -Case-insensitive
+	 ServerName == servername
+ 	 Some arguments are case-sensitive
+     Best practice: treat all as case-sensitive
+
+
+
+ Commands
+
+ $cat  /etc/apache2/apache2.conf | less
+ 
+-Link 
+https://httpd.apache.org/docs/2.4/mod/directives.html
+https://httpd.apache.org/docs/2.4/mod/core.html#documentroot
+
+
+
+Search recursively (-R) and case insenstive (-i)
+
+$cd /etc/apache2$ grep -Ri DocumentRoot .
+
+$less /etc/apache2/srv/web/index.html
+
+HTTP_ROOT
+apache configuration files are stored i.e 
+/etc/apache2
+
+DocumentRoot 
+/srv/web
+
+

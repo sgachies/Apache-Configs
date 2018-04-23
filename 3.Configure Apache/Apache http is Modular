@@ -1,0 +1,88 @@
+Apache http is Modular
+
+System of plugins that add specific functionality 
+Apache comes with a set of default modules that are included upon 
+compiliation 
+Static modules included upon compilation are compiled to httpd and are loaded everytme apache is started the time apache is started.
+Shared modules added without compilation
+Dynamically loaded  meaning they can be turned on and off 
+Slower than static modules but are more flexible 
+
+
+ 
+Modules Have Directives 
+> Configure additional functionality 
+> If config has module directives and module is missing 
+  Server wont start due to a syntax error
+> To prevent that situation the module is wrapped in configuration in  
+  ifModule . 
+  Example: <ifModule mod_ssl> 
+
+  Example: $apachectl -t -D DUMP_MODULES
+
+Changing httpd Configuration
+----------------------------
+Depends on distribution and method of installation
+Describe how to do it in ubuntu
+High level , steps will be similar
+ - Some commands will be different
+ - Might not be available
+
+Know which distribution you're using
+ - Consult documentation for best practices
+
+Debian Module Configuration
+ /etc/apache2/mods-available ->Contain every module with known configuartion
+
+ /etc/apache2/mods-enabled  ->Contain symbolic link to mods-available
+
+Two debain commands that helps in modules 
+ >a2enmod
+ >a2dismod
+
+ They both enable/disable Apache Modules by creating and removing symbolic links from the enabled to the available directory.
+
+
+ Example 
+
+ $cd /etc/apache2/mods-available ls -la
+ .conf - contain configuration  directives  
+ .load - loads the module 
+
+ Example: Mods Available
+
+ $cat /etc/apache2/mods-available/status.conf
+ File status.conf starts with <ifModule mod_status>
+
+ $cat /etc/apache2/mods-available/status.load
+ Load module loads a dynamic module 
+
+
+ Example: Mods Enabled 
+
+ $cat /etc/apache2/mods-enabled/status.conf
+
+ Blue color indicate they are symbolic links they shortcuts to the actual
+ file 
+
+ $sudo a2dismod status
+ $ls -la /etc/apache2/mods-enabled
+ $sudo service apache2 graceful
+ $apachectl -t -D DUMP_MODULES
+ $apachectl status
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

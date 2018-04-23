@@ -1,0 +1,29 @@
+Configuring Apache
+
+-Stored in plain text files
+-Typically named httpd.conf
+-Location set at compile time
+	 Possible to override
+-Changes only recognized when started  i.e graceful
+
+Configuration Location
+
+-Can include additional configurations from main
+-Different distributions have different locations, structure
+
+Apache Config by distribution
+
+Fedora and CentOS /etc/httpd/conf/httpd.conf
+ one monolithic file
+Debian and Ubuntu /etc/apache2/apache2.conf
+ 	Related, smaller configuration files
+ 	One per site
+ 	One per group of configuration
+
+Finding the Apache Configuration
+ -Start with default location in distribution
+ -apachectl can describe the default configurations of files
+ -Search the entire file system
+ 
+http://httpd.apache.org/docs/current/configuring.html
+

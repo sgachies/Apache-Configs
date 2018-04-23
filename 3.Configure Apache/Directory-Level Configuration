@@ -1,0 +1,43 @@
+Directory-Level Configuration
+_____________________________________________________________________
+HTACCESS files is a directory level configuration file  supported by apache server
+and several types of servers.
+They are placed inside th web tree and they are able to overide the sub set of 
+the servers global configuration for that particular directory that the file is
+in.
+
+-Perform redirect
+-Clean url
+-Security implementation
+
+ Directory-Level 
+ _______________________________________________________________________
+.htaccess files
+ plain text
+ Similar to apache configuration
+
+ Intended to provide security for directories
+ ________________________________________________________________________
+ -Evovled to extending configurations
+ -Main configuration can restrict overides
+  Useful for shared host, untrusted users
+
+ htaccess Advantage
+ _________________________________________________________________________
+ -Read every request Immediate changes (no restart)
+ -Flexibility for underprivileged users who shouldn't have access to
+  the main server configuration ,but whomay want access to a resource 
+  or make minor changes to help the application
+
+.htaccess Disadvantages
+__________________________________________________________________________
+  -Increase security risks of running a site especially if someone ir testing boundaries or looking for ways of exploit the system 
+  -Slower than just server config ,Read every page load Search for each time.
+ -htaccess is not recommended method of configuration due to security and performance problem.
+
+ 
+
+
+ Put configuration in central server config 
+ 
+
